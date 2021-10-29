@@ -16,7 +16,6 @@ require("./app/routers/users.route")(app);
 
 // sync databases
 model.sequelize.sync();
-// ini untuk reset database
 // model.sequelize.sync({ force: true });
 
 app.listen(PORT, () => {
