@@ -1,0 +1,45 @@
+GET http://localhost:8080
+
+###
+GET http://localhost:8080/users
+
+###
+GET http://localhost:8080/users/2e469e0a-1017-4614-85c1-9ff24cfa0394
+
+###
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "user_name": "kodokim",
+  "user_firstName": "Tabun",
+  "user_lastName": "Guci",
+  "user_email": "kodokim@ganteng.com",
+  "user_password": "tabun12"
+}
+
+###
+PUT http://localhost:8080/users/2e469e0a-1017-4614-85c1-9ff24cfa0394
+Content-Type: application/json
+
+{
+  "user_name": "kodkim",
+  "user_firstName": "Cicak",
+  "user_lastName": "Ganteng",
+  "user_email": "kucing@garong.com",
+  "user_password": "$asdfasdf"
+}
+
+###
+DELETE http://localhost:8080/users/90376077-b59f-4968-9d2d-f8ef390690ea
+
+
+###
+POST http://localhost:8080/users/update
+Content-Type: application/json
+
+{
+  "user_id": "b3f6e3e9--408a-ad64-444f5eca7888",
+  "user_oldPassword": "tabun",
+  "user_newPassword": "kucinggarong"
+}
